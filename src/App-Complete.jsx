@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { Toaster } from 'react-hot-toast';
 import store from './store';
 import { ROUTES } from './constants/routes';
-import './App.css';
 
 // Layouts
 import MainLayout from './layouts/main-layout/MainLayout';

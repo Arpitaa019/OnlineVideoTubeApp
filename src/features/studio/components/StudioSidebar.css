@@ -1,0 +1,23 @@
+.studio-sidebar {
+  width: 240px;
+  background: #f9f9f9;
+  padding: 20px;
+  height: 100vh;
+}
+
+.studio-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.studio-sidebar a {
+  padding: 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #030303;
+}
+
+.studio-sidebar a:hover {
+  background: #e5e5e5;
+}

@@ -1,0 +1,241 @@
+.video-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+}
+
+.video-card__thumbnail-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.video-card__thumbnail {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  background: var(--surface);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-card__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover .video-card__thumbnail img {
+  transform: scale(1.05);
+}
+
+.video-card__duration,
+.video-card__quality,
+.video-card__live-badge {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.video-card__quality {
+  bottom: 8px;
+  right: auto;
+  left: 8px;
+  background: rgba(229, 9, 20, 0.9);
+}
+
+.video-card__live-badge {
+  background: #e50914;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.video-card__details {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.video-card__avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.video-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.video-card__title {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.video-card__title h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  transition: color 0.2s ease;
+}
+
+.video-card:hover .video-card__title h3 {
+  color: var(--primary-color);
+}
+
+.video-card__channel {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.video-card__channel:hover {
+  color: var(--text-primary);
+}
+
+.video-card__verified {
+  width: 14px;
+  height: 14px;
+  color: #3ea6ff;
+}
+
+.video-card__metadata {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.video-card__separator {
+  font-size: 10px;
+}
+
+.video-card__tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.video-card__tag {
+  background: var(--surface-hover);
+  color: var(--text-muted);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* Size variants */
+.video-card.small .video-card__thumbnail {
+  border-radius: 8px;
+}
+
+.video-card.small .video-card__avatar {
+  width: 28px;
+  height: 28px;
+}
+
+.video-card.small .video-card__title h3 {
+  font-size: 13px;
+  -webkit-line-clamp: 2;
+}
+
+.video-card.small .video-card__channel,
+.video-card.small .video-card__metadata {
+  font-size: 12px;
+}
+
+.video-card.large .video-card__avatar {
+  width: 48px;
+  height: 48px;
+}
+
+.video-card.large .video-card__title h3 {
+  font-size: 16px;
+  -webkit-line-clamp: 3;
+}
+
+.video-card.large .video-card__channel,
+.video-card.large .video-card__metadata {
+  font-size: 14px;
+}
+
+/* Horizontal layout for lists */
+.video-card.horizontal {
+  flex-direction: row;
+  gap: 12px;
+}
+
+.video-card.horizontal .video-card__thumbnail {
+  width: 240px;
+  padding-bottom: 135px; /* 16:9 of 240px */
+  flex-shrink: 0;
+}
+
+.video-card.horizontal .video-card__details {
+  flex: 1;
+  margin-top: 0;
+}
+
+.video-card.horizontal .video-card__title h3 {
+  -webkit-line-clamp: 2;
+  font-size: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-card.horizontal {
+    flex-direction: column;
+  }
+
+  .video-card.horizontal .video-card__thumbnail {
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+
+  .video-card__avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .video-card__title h3 {
+    font-size: 14px;
+  }
+}

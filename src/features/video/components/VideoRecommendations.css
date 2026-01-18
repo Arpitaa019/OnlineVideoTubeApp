@@ -1,0 +1,37 @@
+.video-recommendations {
+  padding: 20px 0;
+}
+
+.video-recommendations h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.recommendations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recommendation-item {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.recommendation-item img {
+  width: 168px;
+  height: 94px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recommendation-info h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.recommendation-info p {
+  font-size: 12px;
+  color: #606060;
+}

@@ -1,0 +1,23 @@
+.video-info {
+  padding: 20px 0;
+}
+
+.video-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.video-meta {
+  display: flex;
+  gap: 8px;
+  color: #606060;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.video-description {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+}
