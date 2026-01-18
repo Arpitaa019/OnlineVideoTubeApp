@@ -1,0 +1,23 @@
+export const ROUTES = {
+  HOME: '/',
+  WATCH: '/watch/:videoId',
+  WATCH_PATH: (videoId) => `/watch/${videoId}`,
+  CHANNEL: '/channel/:channelId',
+  CHANNEL_PATH: (channelId) => `/channel/${channelId}`,
+  SEARCH: '/search',
+  TRENDING: '/trending',
+  SUBSCRIPTIONS: '/subscriptions',
+  LIBRARY: '/library',
+  HISTORY: '/history',
+  LIKED_VIDEOS: '/liked-videos',
+  WATCH_LATER: '/watch-later',
+  PREMIUM: '/premium',
+  SETTINGS: '/settings',
+  STUDIO: '/studio',
+  LIVESTREAM: '/live/:streamId',
+  LIVESTREAM_PATH: (streamId) => `/live/${streamId}`,
+  AUTH: {
+    LOGIN: '/auth/login',
+    REGISTER: '/auth/register',
+  },
+};

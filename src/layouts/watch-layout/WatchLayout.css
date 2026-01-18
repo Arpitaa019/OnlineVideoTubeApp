@@ -1,0 +1,8 @@
+.watch-layout {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.watch-layout-content {
+  padding-top: 64px;
+}

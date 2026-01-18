@@ -1,0 +1,21 @@
+.studio-layout {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.studio-content {
+  display: flex;
+  padding-top: 64px;
+}
+
+.studio-main {
+  flex: 1;
+  margin-left: 240px;
+  padding: 24px;
+}
+
+@media (max-width: 1024px) {
+  .studio-main {
+    margin-left: 0;
+  }
+}

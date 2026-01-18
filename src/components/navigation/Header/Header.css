@@ -1,0 +1,150 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 1000;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 200px;
+}
+
+.menu-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--text-primary);
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.menu-button:hover {
+  background: var(--bg-secondary);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo-icon {
+  color: var(--primary-color);
+  font-size: 24px;
+}
+
+.header-center {
+  flex: 1;
+  max-width: 640px;
+  padding: 0 40px;
+}
+
+.search-form {
+  display: flex;
+  height: 40px;
+}
+
+.search-input {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  border-radius: 20px 0 0 20px;
+  padding: 0 16px;
+  font-size: 14px;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--primary-color);
+}
+
+.search-button {
+  width: 64px;
+  border: 1px solid var(--border-color);
+  border-radius: 0 20px 20px 0;
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-button:hover {
+  background: var(--bg-tertiary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+  justify-content: flex-end;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.icon-button:hover {
+  background: var(--bg-secondary);
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.sign-in-button {
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.sign-in-button:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .header-center {
+    display: none;
+  }
+  
+  .logo-text {
+    display: none;
+  }
+}
